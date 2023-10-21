@@ -18,10 +18,10 @@ program
 var { email, password, message, subject, receiver_email_core, min_value, max_value } = program._optionValues;
 
 
-/*if (!client_email || !client_password || !message || !receiver_email_core) {
+if (!client_email || !client_password || !message || !receiver_email_core) {
   console.error("Usage: node app.js --email <your-email> --password <your-password> --message <your-message> --subject <subject> --receiver_email_core <receiver_email_core> [--min_value <min_value>] [--max_value <max_value>]");
   process.exit(1);
-}   */
+}   
 
 function generateMailOptions(email_client, email_core, subject, current_number, message){
     const regex = /{generate}/i;
